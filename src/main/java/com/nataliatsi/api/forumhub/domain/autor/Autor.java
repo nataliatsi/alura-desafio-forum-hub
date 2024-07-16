@@ -18,4 +18,10 @@ public class Autor {
     private Long id;
     private String nome;
     private String email;
+
+    public Autor(DadosAutor dados){
+        this.nome = dados.nome();
+        this.email = dados.email();
+
+    }
 }
