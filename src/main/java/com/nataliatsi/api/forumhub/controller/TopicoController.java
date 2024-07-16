@@ -4,6 +4,7 @@ import com.nataliatsi.api.forumhub.domain.topico.DadosCadastroTopico;
 import com.nataliatsi.api.forumhub.domain.topico.DadosDetalhamentoTopico;
 import com.nataliatsi.api.forumhub.domain.topico.Topico;
 import com.nataliatsi.api.forumhub.repository.TopicoRepository;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/topicos")
+@SecurityRequirement(name = "bearer-key")
 public class TopicoController {
 
     @Autowired

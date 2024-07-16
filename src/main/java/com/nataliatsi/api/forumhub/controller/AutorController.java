@@ -3,6 +3,7 @@ package com.nataliatsi.api.forumhub.controller;
 import com.nataliatsi.api.forumhub.domain.autor.Autor;
 import com.nataliatsi.api.forumhub.domain.autor.DadosAutor;
 import com.nataliatsi.api.forumhub.repository.AutorRepository;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/autores")
+@SecurityRequirement(name = "bearer-key")
 public class AutorController {
 
     @Autowired

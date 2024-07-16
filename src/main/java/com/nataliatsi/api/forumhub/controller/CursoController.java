@@ -1,9 +1,9 @@
 package com.nataliatsi.api.forumhub.controller;
 
-import com.nataliatsi.api.forumhub.domain.autor.DadosAutor;
 import com.nataliatsi.api.forumhub.domain.curso.Curso;
 import com.nataliatsi.api.forumhub.domain.curso.DadosCurso;
 import com.nataliatsi.api.forumhub.repository.CursoRepository;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -17,6 +17,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/cursos")
+@SecurityRequirement(name = "bearer-key")
 public class CursoController {
 
     @Autowired
