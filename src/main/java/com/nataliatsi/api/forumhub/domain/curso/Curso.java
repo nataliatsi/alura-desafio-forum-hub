@@ -17,6 +17,10 @@ public class Curso {
     private Long id;
     private String nome;
 
-    @Enumerated(EnumType.STRING)
-    private CategoriaCurso categoria;
+    private String categoria;
+
+    public Curso(DadosCurso dados){
+        this.nome = dados.nome();
+        this.categoria = dados.categoriaCurso();
+    }
 }
